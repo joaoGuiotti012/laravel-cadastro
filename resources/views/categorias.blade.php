@@ -1,6 +1,5 @@
 @extends('layout.app', ["current" => "categorias"])
 
-
 @section('conteudo')
 <br>
 <div class="container">

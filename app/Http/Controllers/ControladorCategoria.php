@@ -28,6 +28,7 @@ class ControladorCategoria extends Controller
     public function create()
     {
         return view('novacategoria');
+        
     }
 
     /**
@@ -41,6 +42,8 @@ class ControladorCategoria extends Controller
         $cat = new Categoria();
         $cat->nome = $request->input('nomeCategoria');
         $cat->save();    
+
+        return redirect('/categorias');
     }
 
     /**
@@ -89,5 +92,7 @@ class ControladorCategoria extends Controller
         if(isset($cat)){
             $cat->delete();
         }
+
+        return redirect('/categorias');
     }
 }
