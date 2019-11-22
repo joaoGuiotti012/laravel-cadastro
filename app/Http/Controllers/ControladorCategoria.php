@@ -17,7 +17,7 @@ class ControladorCategoria extends Controller
     {
         $cats = Categoria::all();
         return view('categorias',  compact('cats'));
-        
+
     }
 
     /**
@@ -85,6 +85,9 @@ class ControladorCategoria extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cat = Categoria::find($id);
+        if(isset($cat)){
+            $cat->delete();
+        }
     }
 }

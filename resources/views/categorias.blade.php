@@ -7,16 +7,17 @@
     <div class="card border">
         <div class="card-body">
             <h5 class="card-title">Cadastro de Categorias</h5>
-            <table class="table table-ordered table-hover">
+@if ( count($cats) > 0)
+            <table class="table table-ordered table-hover table-striped">
                 <thead>
-                    <tr>
+                    <tr class="text-center">
                         <th>Código</th>
-                        <th>nome</th>
+                        <th>Nome</th>
                         <th>Ações</th>
                     </tr>
                     <tbody>
                         @foreach ($cats as $cat)
-                            <tr>
+                            <tr class="text-center">
                                 <td>{{ $cat->id }}</td>
                                 <td>{{ $cat->nome }}</td>
                                 <td> 
@@ -28,6 +29,10 @@
                     </tbody>
                 </thead>
             </table>
+@endif
+        </div>
+        <div class="card-footer">
+            <a href="/categorias/novo" class="btn  btn-success" role="button"> Nova  <i class="fas fa-plus-square"> </i> </a>
         </div>
     </div>
 </div>
