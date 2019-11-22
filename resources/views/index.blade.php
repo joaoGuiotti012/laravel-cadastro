@@ -1,8 +1,4 @@
-@extends('layout.app')
-
-@component('navbar')
-    
-@endcomponent
+@extends('layout.app', ["current" => "home"] )
 
 @section('conteudo')
     <br>

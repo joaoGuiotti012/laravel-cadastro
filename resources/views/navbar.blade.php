@@ -8,10 +8,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
-        <a class="nav-item nav-link" href="/produtos">Produtos</a>
-        <a class="nav-item nav-link" href="/categorias">Categorias</a>
+        <a @if ( $current == "home") class="nav-item nav-link active" @else class="nav-item nav-link" @endif  href="/">Home <span class="sr-only">(Página atual)</span></a>
+        <a @if ( $current == "produtos") class="nav-item nav-link active" @else class="nav-item nav-link" @endif href="/produtos">Produtos</a>
+        <a @if ( $current == "categorias") class="nav-item nav-link active" @else class="nav-item nav-link" @endif href="/categorias">Categorias</a>
         <a class="nav-item nav-link disabled" href="#">Desativado</a>
         </div>
     </div>
 </nav>
+
+{{-- class="nav-item nav-link active"  --}}
